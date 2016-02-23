@@ -1,6 +1,8 @@
 # WeixinBot [![star this repo](http://github-svg-buttons.herokuapp.com/star.svg?user=Urinx&repo=WeixinBot&style=flat&background=1081C1)](http://github.com/Urinx/WeixinBot) [![fork this repo](http://github-svg-buttons.herokuapp.com/fork.svg?user=Urinx&repo=WeixinBot&style=flat&background=1081C1)](http://github.com/Urinx/WeixinBot/fork) ![python](https://img.shields.io/badge/python-2.7-ff69b4.svg)
 
 网页版微信API，包含终端版微信及微信机器人
+> 由于python版本、依赖版本、操作系统版本的原因，修改了一些代码，小逗比机器人失效，换成了图灵机器人
+by [@discountry](https://github.com/discountry/)
 
 ## Demo
 为了运行 `weixin.py` 示例脚本，你需要有安装 `qrcode` 包，你可以通过 `pip install qrcode` 来安装。
