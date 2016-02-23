@@ -380,6 +380,12 @@ class WebWeixin(object):
 					group = self.getUserRemarkName(msg['FromUserName'])
 					name = self.getUserRemarkName(people)
 					print '|%s| %s: %s' % (group, name, content.replace('<br/>','\n'))
+					if self.autoReplyMode:
+						ans = self._tuling(content)+'\n[微信机器人自动回复]'
+						if self.webwxsendmsg(ans, msg['FromUserName']):
+							print '自动回复: '+ans
+						else:
+							print '自动回复失败'
 				else:
 					print name+': '+content
 					if self.autoReplyMode:
