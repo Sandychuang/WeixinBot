@@ -85,6 +85,7 @@ class WebWeixin(object):
 		self.GroupList = []
 		self.autoReplyMode = False
 		self.syncHost = ''
+		self.Tulin_key = 'YOUR TULIN API KEY HERE'
 
 		opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookielib.CookieJar()))
 		urllib2.install_opener(opener)
@@ -582,7 +583,7 @@ class WebWeixin(object):
 		return data
 
 	def _tuling(self, word):
-		url = 'http://www.tuling123.com/openapi/api?key=2128bcb5211b04332dd30b33624efa58&info='
+		url = 'http://www.tuling123.com/openapi/api?key=' + self.Tulin_key + '&info='
 		try:
 			r = requests.get(url + word)
 			return json.loads(r.content,encoding='utf-8')["text"]
